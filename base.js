@@ -21,7 +21,7 @@ onLoaded( function()
 	//xtfm.floating.add( 'vertical', _( '#scrollBanner' ), 910, 0, 5, 0, 'absolute' );
 	//new verticalFloating( document.getElementById( "scrollBanner" ), 0, 262, 1, 1);
 	//new Floating( document.getElementById( "scrollBanner" ), 900, 262, 50, 10 );
-	//new Floating(Àû¿ëÇÒ°³Ã¼ , XÃà¿©¹é , YÃà¿©¹é , ¹Ì²ô·¯Áö´Â¼Óµµ:ÀÛÀ»¼ö·Ïºü¸§..±âº»20 , ºü¸£±â:ÀÛÀ»¼ö·ÏºÎµå·¯¿ò..±âº»10);
+	//new Floating(ì ìš©í• ê°œì²´ , Xì¶•ì—¬ë°± , Yì¶•ì—¬ë°± , ë¯¸ë„ëŸ¬ì§€ëŠ”ì†ë„:ì‘ì„ìˆ˜ë¡ë¹ ë¦„..ê¸°ë³¸20 , ë¹ ë¥´ê¸°:ì‘ì„ìˆ˜ë¡ë¶€ë“œëŸ¬ì›€..ê¸°ë³¸10);
 
 	//Top Search
 	//tsTypingTarget = _( '#topSearchText' );
@@ -32,7 +32,7 @@ onLoaded( function()
 		xtfm.event.addEvent( tsTypingTarget, 'blur', topSearchFocus );
 		topSearchBlurEffect( 'on' );
 	}
-	//validPopup( 'Notice240207', 'http://www.8doink.com/shop/data/8do_skin/pop20240207.html', 'width=706, height=707, top=0, left=0, scrollbar=no' );
+	//validPopup( 'Notice230118', 'http://www.8doink.com/shop/data/8do_skin/pop20230118.html', 'width=706, height=707, top=0, left=0, scrollbar=no' );
 	//validPopup( 'Notice230927', 'http://www.8doink.com/shop/data/8do_skin/pop20230927.html', 'width=810, height=812, top=0, left=0, scrollbar=no' );
 });
 
@@ -47,7 +47,7 @@ function validPopupCookie( name )
 	{
 		start = i;
 		end = start + name.length;
-		// name°ú µ¿ÀÏÇÑ ¹®ÀÚ°¡ ÀÖ´Ù¸é
+		// nameê³¼ ë™ì¼í•œ ë¬¸ìê°€ ìˆë‹¤ë©´
 		if(document.cookie.substring(start, end) == name)
 		{
 			Found = true;
@@ -61,7 +61,7 @@ function validPopupCookie( name )
 	{
 		start = end + 1;
 		end = document.cookie.indexOf(";", start);
-		// ¸¶Áö¸· ºÎºĞÀÌ¶ó ´Â °ÍÀ» ÀÇ¹Ì(¸¶Áö¸·¿¡´Â ";"°¡ ¾ø´Ù)
+		// ë§ˆì§€ë§‰ ë¶€ë¶„ì´ë¼ ëŠ” ê²ƒì„ ì˜ë¯¸(ë§ˆì§€ë§‰ì—ëŠ” ";"ê°€ ì—†ë‹¤)
 		if( end < start ) end = document.cookie.length;
 		return document.cookie.substring( start, end );
 	}
@@ -250,7 +250,7 @@ function setFocusSuggestTopSearch( _mode )
 	{
 		var suggestInputObj = _( '#suggestInputText' );
 
-		/*inputÀÇ value°¡ ºñ¾îÀÖÀ» °æ¿ì*/
+		/*inputì˜ valueê°€ ë¹„ì–´ìˆì„ ê²½ìš°*/
 		if( empty( suggestInputObj ) ) //_showText == '' || _showText == null || _showText == undefined )
 		{
 			setStyle( _( '#suggestInputText' ), 'background:#transparent;border:solid 2px #b9b9b9;' );
@@ -353,7 +353,7 @@ verticalFloating.prototype.Run = function()
 //dobermann75@gmail.com
 //----------------------------------------------
 
-//new Floating(Àû¿ëÇÒ°³Ã¼ , XÃà¿©¹é , YÃà¿©¹é , ¹Ì²ô·¯Áö´Â¼Óµµ:ÀÛÀ»¼ö·Ïºü¸§..±âº»20 , ºü¸£±â:ÀÛÀ»¼ö·ÏºÎµå·¯¿ò..±âº»10);
+//new Floating(ì ìš©í• ê°œì²´ , Xì¶•ì—¬ë°± , Yì¶•ì—¬ë°± , ë¯¸ë„ëŸ¬ì§€ëŠ”ì†ë„:ì‘ì„ìˆ˜ë¡ë¹ ë¦„..ê¸°ë³¸20 , ë¹ ë¥´ê¸°:ì‘ì„ìˆ˜ë¡ë¶€ë“œëŸ¬ì›€..ê¸°ë³¸10);
 
 function Floating(FloatingObj,MarginX,MarginY,Percentage,setTime) {
 	this.FloatingObj = FloatingObj;
@@ -476,7 +476,7 @@ function movePageByFlash( e, _depth1, _depth2 )
 }
 
 xtfmBookMarkUrl = 'http://www.8doink.com/';
-xtfmBookMarkTitle = 'ÆÈµµÀ×Å© - À×Å©Åä³Ê ºÎ¹® ¼ÒºñÀÚ¸¸Á·µµ 1À§';
+xtfmBookMarkTitle = 'íŒ”ë„ì‰í¬ - ì‰í¬í† ë„ˆ ë¶€ë¬¸ ì†Œë¹„ìë§Œì¡±ë„ 1ìœ„';
 
 function xtfmAddBookMark( _url, _title )
 {
@@ -492,7 +492,7 @@ function xtfmAddBookMark( _url, _title )
 
 
 
-var tsTypingTextArray = new Array( 'À×Å©/Åä³Ê/ÇÁ¸°ÅÍÀÇ ¸ğµ¨¸íÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.',  '¿¹) CLX-3180 -> 3180', '¿¹) MP-258 -> 258', '¸ğµ¨¸íÀÇ ¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä ^^' );
+var tsTypingTextArray = new Array( 'ì‰í¬/í† ë„ˆ/í”„ë¦°í„°ì˜ ëª¨ë¸ëª…ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.',  'ì˜ˆ) CLX-3180 -> 3180', 'ì˜ˆ) MP-258 -> 258', 'ëª¨ë¸ëª…ì˜ ìˆ«ìë§Œ ì…ë ¥í•˜ì„¸ìš” ^^' );
 var tsTypingTextArrayCount = 0;
 var strTs = tsTypingTextArray[ tsTypingTextArrayCount % 2 ];
 var tsTypingPosition = 0;
@@ -661,7 +661,7 @@ function showLayerMenu4PrinterList( _goodsCode, _str, _no, _isSales )
 				{
 					text += '	<tr>';
 					text += '		<td height="22">- </td>';
-					text += '		<td>ÇöÀç ÆÇ¸ÅÁßÀÎ ÇÁ¸°ÅÍ°¡ ¾Æ´Õ´Ï´Ù.</td>';
+					text += '		<td>í˜„ì¬ íŒë§¤ì¤‘ì¸ í”„ë¦°í„°ê°€ ì•„ë‹™ë‹ˆë‹¤.</td>';
 					text += '	</tr>';
 				}
 			}
@@ -721,7 +721,7 @@ function viewGoodsInfo( gdcode )
 }
 
 /*-------------------------------------------------------------------------------------
-* setGoodsCount / »óÇ° ¼ö·® Áõ°¨À» À§ÇÑ ½ºÅ©¸³Æ®
+* setGoodsCount / ìƒí’ˆ ìˆ˜ëŸ‰ ì¦ê°ì„ ìœ„í•œ ìŠ¤í¬ë¦½íŠ¸
 *
 * -
 * -
@@ -739,7 +739,7 @@ function setGoodsCount( _objName, _objIdx, _toggle )
 
 	if( isNaN( obj.value ) )
 	{
-		alert( '¼ö·®Àº ¼ıÀÚ¸¸ ÀÔ·ÂÀÌ °¡´ÉÇÕ´Ï´Ù.' );
+		alert( 'ìˆ˜ëŸ‰ì€ ìˆ«ìë§Œ ì…ë ¥ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.' );
 		obj.value = 1;
 		obj.focus();
 	}

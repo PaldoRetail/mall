@@ -98,9 +98,9 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 {
 	/*-----------------------------------------------------------
 	 * @function	- _
-	 * @brief		- ¼±ÅÃÀÚ / ¾ğ´õ½ºÄÚ¾î¸¦ »ç¿ëÇÏ¿© °£´ÜÈ÷ elements¸¦ ¼±ÅÃÇÑ´Ù.
-						- ÆÄ¶ó¹ÌÅÍ·Î ¹®ÀÚ¿­À» ¹Ş°í, id´Â #À» Å¬·¡½º´Â .À» µğÆúµå´Â ³×ÀÓ°ªÀ¸·Î
-						- ¹Ì¿Ï¼º
+	 * @brief		- ì„ íƒì / ì–¸ë”ìŠ¤ì½”ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ ê°„ë‹¨íˆ elementsë¥¼ ì„ íƒí•œë‹¤.
+						- íŒŒë¼ë¯¸í„°ë¡œ ë¬¸ìì—´ì„ ë°›ê³ , idëŠ” #ì„ í´ë˜ìŠ¤ëŠ” .ì„ ë””í´ë“œëŠ” ë„¤ì„ê°’ìœ¼ë¡œ
+						- ë¯¸ì™„ì„±
 	-----------------------------------------------------------*/
 	function _( str )
 	{
@@ -112,18 +112,18 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 			case '.':
 			{
 				var resultArray = xtfm.tools.getElementByClass( str.removeAt( 0 ) );
-				( resultArray.length > 1 ) ? alert( 'µ¿ÀÏÇÑ Å¬·¡½º¸íÀ» °¡Áø °´Ã¼°¡ ÇÏ³ª ÀÌ»óÀÔ´Ï´Ù.' ):obj = resultArray[ 0 ];
+				( resultArray.length > 1 ) ? alert( 'ë™ì¼í•œ í´ë˜ìŠ¤ëª…ì„ ê°€ì§„ ê°ì²´ê°€ í•˜ë‚˜ ì´ìƒì…ë‹ˆë‹¤.' ):obj = resultArray[ 0 ];
 				break;
 			}
 			default : obj = document.getElementsByName( str ); break;
 		}
 
-		if( !obj ) alert( 'ÀÏÄ¡ÇÏ´Â °´Ã¼°¡ ¾ø½À´Ï´Ù.' );
+		if( !obj ) alert( 'ì¼ì¹˜í•˜ëŠ” ê°ì²´ê°€ ì—†ìŠµë‹ˆë‹¤.' );
 		return obj;
 	}
 	/*-----------------------------------------------------------
 	 * @function	- trace
-	 * @brief		- ÇÃ·¡½ÃÀÇ Æ®·¹ÀÌ½º¿Í °°ÀÌ ÆÄ¶ó¹ÌÅÍ¸¦ ÄŞ¸¶·Î ±¸ºĞÇÏ¿© ¾Ë·¯Æ®·Î Ãâ·Â
+	 * @brief		- í”Œë˜ì‹œì˜ íŠ¸ë ˆì´ìŠ¤ì™€ ê°™ì´ íŒŒë¼ë¯¸í„°ë¥¼ ì½¤ë§ˆë¡œ êµ¬ë¶„í•˜ì—¬ ì•ŒëŸ¬íŠ¸ë¡œ ì¶œë ¥
 	-----------------------------------------------------------*/
 	function trace()
 	{
@@ -289,7 +289,7 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	{
 		if( _obj === null || _obj === undefined )
 		{
-			trace( '¾Ë ¼ö ¾ø´Â °´Ã¼ÀÔ´Ï´Ù.' );
+			trace( 'ì•Œ ìˆ˜ ì—†ëŠ” ê°ì²´ì…ë‹ˆë‹¤.' );
 			return true;
 		}
 
@@ -308,21 +308,21 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	function isEmpty( str ){ return ( str === null || str === undefined || str === false || str == '' ) ? true: false; }
 
 	/*-------------------------------------------------------------------------------------
-	 * isValidLoaded ( Type Boolean ) - ·Îµå °Ë»ç¸¦ Çß´ÂÁö ¿©ºÎ / validLoaded ÇÔ¼ö¿¡¼­ true·Î º¯°æ
-	 * isLoaded ( Type Boolean ) - ·ÎµåµÇ¾ú´ÂÁö ¿©ºÎ / onLoadInit ÇÔ¼ö¿¡¼­ true·Î º¯°æ
-	 * loadedActions ( Type Array ) - ¿Â·Îµå½Ã ½ÇÇàÇÒ ¾×¼Çµé / onLoaded¿¡¼­ Ãß°¡ / onLoadinit ¿¡¼­ ½ÇÇà
+	 * isValidLoaded ( Type Boolean ) - ë¡œë“œ ê²€ì‚¬ë¥¼ í–ˆëŠ”ì§€ ì—¬ë¶€ / validLoaded í•¨ìˆ˜ì—ì„œ trueë¡œ ë³€ê²½
+	 * isLoaded ( Type Boolean ) - ë¡œë“œë˜ì—ˆëŠ”ì§€ ì—¬ë¶€ / onLoadInit í•¨ìˆ˜ì—ì„œ trueë¡œ ë³€ê²½
+	 * loadedActions ( Type Array ) - ì˜¨ë¡œë“œì‹œ ì‹¤í–‰í•  ì•¡ì…˜ë“¤ / onLoadedì—ì„œ ì¶”ê°€ / onLoadinit ì—ì„œ ì‹¤í–‰
 	-------------------------------------------------------------------------------------*/
 	var isValidLoaded = false;
 	var isLoaded = false;
 	var loadedActions = [];
 
 	/*-------------------------------------------------------------------------------------
-	* onload Å¸ÀÌ¹Ö ¾×¼ÇÀ» ½ÇÇà È¤Àº ´ã±â À§ÇÑ ÇÔ¼ö
+	* onload íƒ€ì´ë° ì•¡ì…˜ì„ ì‹¤í–‰ í˜¹ì€ ë‹´ê¸° ìœ„í•œ í•¨ìˆ˜
 	*
-	* - validLoaded() -> ·Îµå°¡ ¿Ï·á µÇ¾ú´ÂÁö Ã¼Å©ÇÏ¿© ÀÌº¥Æ® ÇÒ´ç
-	* - isLoaded( xtfm.isLoaded ) °ªÀ» Ã¼Å© / false ->loaded Actions ¿¡ ´ã¾ÆµĞ´Ù. / true -> ¹Ù·Î ½ÇÇàÇÑ´Ù.
+	* - validLoaded() -> ë¡œë“œê°€ ì™„ë£Œ ë˜ì—ˆëŠ”ì§€ ì²´í¬í•˜ì—¬ ì´ë²¤íŠ¸ í• ë‹¹
+	* - isLoaded( xtfm.isLoaded ) ê°’ì„ ì²´í¬ / false ->loaded Actions ì— ë‹´ì•„ë‘”ë‹¤. / true -> ë°”ë¡œ ì‹¤í–‰í•œë‹¤.
 	*
-	* @param ( Type Function ) : _action - ÀÌ¸§¾ø´Â ÇÔ¼ö Å¸ÀÔÀ¸·Î ½ÇÇàÇØ¾ßÇÒ ¸í·ÉÀ» ÀÎÀÚ·Î ¹Ş´Â´Ù.
+	* @param ( Type Function ) : _action - ì´ë¦„ì—†ëŠ” í•¨ìˆ˜ íƒ€ì…ìœ¼ë¡œ ì‹¤í–‰í•´ì•¼í•  ëª…ë ¹ì„ ì¸ìë¡œ ë°›ëŠ”ë‹¤.
 	* @return ( Type Function ) :
 	*
 	* @todo : -
@@ -343,9 +343,9 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	}
 
 	/*-------------------------------------------------------------------------------------
-	* onload ½Ã ½ÇÇà ÇÔ¼ö
+	* onload ì‹œ ì‹¤í–‰ í•¨ìˆ˜
 	*
-	* - isLoaded( xtfm.isLoaded )¸¦ Ã¼Å©ÇÏ¿© falseÀÌ¸é isLoaded¸¦ true·Î º¯°æÈÄ loadedActions¿¡ ´ã±ä ¾×¼ÇÀ» ½ÇÇàÇÑ´Ù.
+	* - isLoaded( xtfm.isLoaded )ë¥¼ ì²´í¬í•˜ì—¬ falseì´ë©´ isLoadedë¥¼ trueë¡œ ë³€ê²½í›„ loadedActionsì— ë‹´ê¸´ ì•¡ì…˜ì„ ì‹¤í–‰í•œë‹¤.
 	*
 	* @todo : -
 	-------------------------------------------------------------------------------------*/
@@ -368,9 +368,9 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	}
 
 	/*-------------------------------------------------------------------------------------
-	* ·Îµå°¡ µÇ¾ú´ÂÁö È®ÀÎ / onload ÀÌº¥Æ® ´ëÃ¼ / ºê¶ó¿ìÀúº° ´ëÀÀ
+	* ë¡œë“œê°€ ë˜ì—ˆëŠ”ì§€ í™•ì¸ / onload ì´ë²¤íŠ¸ ëŒ€ì²´ / ë¸Œë¼ìš°ì €ë³„ ëŒ€ì‘
 	*
-	* - onLoadedÇÔ¼ö¿¡¼­ È£Ãâ
+	* - onLoadedí•¨ìˆ˜ì—ì„œ í˜¸ì¶œ
 	* -
 	*
 	* @return ( Type Function ) :
@@ -384,13 +384,13 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 		xtfm.isValidLoaded = true;
 		var removeHandler = null;
 
-		//ºê¶ó¿ìÀú ÀÌº¥Æ®°¡ ÀÌ¹Ì ¹ß»ıÇÏ°í ³­ µÚ¿¡ È£Ãâ µÉ °æ¿ì
+		//ë¸Œë¼ìš°ì € ì´ë²¤íŠ¸ê°€ ì´ë¯¸ ë°œìƒí•˜ê³  ë‚œ ë’¤ì— í˜¸ì¶œ ë  ê²½ìš°
 		if( document.readyState === "complete" )
 		{
 			return xtfm.onLoadInit();
 		}
 
-		//IE¸¦ Á¦¿ÜÇÑ ³ª¸ÓÁö ºê¶ó¿ìÀú ´ëÀÀ
+		//IEë¥¼ ì œì™¸í•œ ë‚˜ë¨¸ì§€ ë¸Œë¼ìš°ì € ëŒ€ì‘
 		if( document.addEventListener )
 		{
 			document.addEventListener( "DOMContentLoaded", DOMContentLoaded, false );
@@ -418,9 +418,9 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	}
 
 	/*-------------------------------------------------------------------------------------
-	* ·Îµå°¡ µÇ¾ú´ÂÁö È®ÀÎ / onload ÀÌº¥Æ® ´ëÃ¼ / ºê¶ó¿ìÀúº° ´ëÀÀ
+	* ë¡œë“œê°€ ë˜ì—ˆëŠ”ì§€ í™•ì¸ / onload ì´ë²¤íŠ¸ ëŒ€ì²´ / ë¸Œë¼ìš°ì €ë³„ ëŒ€ì‘
 	*
-	* - onLoadedÇÔ¼ö¿¡¼­ È£Ãâ
+	* - onLoadedí•¨ìˆ˜ì—ì„œ í˜¸ì¶œ
 	* -
 	*
 	* @return ( Type Function ) :
@@ -451,7 +451,7 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	/*-------------------------------------------------------------------------------------
 	*
 	*
-	* - ¹è¿­¿¡ ´ã°ÜÁø ¾×¼ÇÀ» ½ÇÇà
+	* - ë°°ì—´ì— ë‹´ê²¨ì§„ ì•¡ì…˜ì„ ì‹¤í–‰
 	* -
 	* @param
 	* @return ( Type Function ) :
@@ -555,13 +555,13 @@ function xtfmPopUpCC( _pageURL, _popWidth, _popHeight, _popScrollbar, _popResiza
 	{
 		if( isEmpty( _values ) )
 		{
-			alert( 'ÀÎÀÚ°¡ Àü´ŞµÇÁö ¾Ê¾Ò°Å³ª ºñ¾îÀÖ½À´Ï´Ù.' );
+			alert( 'ì¸ìê°€ ì „ë‹¬ë˜ì§€ ì•Šì•˜ê±°ë‚˜ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.' );
 			return;
 		}
 
 		if( typeof( _values ) != 'string' && typeof( _values ) != 'array' )
 		{
-			alert( 'ÀÎÀÚ°¡ ¹®ÀÚ¿­ÀÌ°Å³ª ¹è¿­ÀÌ¾î¾ß ÇÕ´Ï´Ù.' );
+			alert( 'ì¸ìê°€ ë¬¸ìì—´ì´ê±°ë‚˜ ë°°ì—´ì´ì–´ì•¼ í•©ë‹ˆë‹¤.' );
 			return;
 		}
 
@@ -1128,7 +1128,7 @@ xtfm.pop.defaultSet =
 
 		if( !params.url )
 		{
-			trace( 'DEBUG - xtfm.pop.open->ÆË¾÷ URL ÀÌ ¾ø½À´Ï´Ù.' );
+			trace( 'DEBUG - xtfm.pop.open->íŒì—… URL ì´ ì—†ìŠµë‹ˆë‹¤.' );
 			return;
 		}
 		params.name = ( params.name ) ? params.name : 'newPop';
@@ -1248,7 +1248,7 @@ xtfm.ajax.create = function( instanceObj, instanceId )
 {
 	if( !instanceObj || typeof( instanceObj ) != 'object' )
 	{
-		_alert( 'ÆÄ¶ó¹ÌÅÍ°¡ ¾ø°Å³ª Çü½ÄÀÌ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù.', instanceObj );
+		_alert( 'íŒŒë¼ë¯¸í„°ê°€ ì—†ê±°ë‚˜ í˜•ì‹ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.', instanceObj );
 		return;
 	}
 
@@ -1257,7 +1257,7 @@ xtfm.ajax.create = function( instanceObj, instanceId )
 	ajaxInstance.httpObj = xtfm.ajax.createHttpRequest();
 	if( ajaxInstance.httpObj == null )
 	{
-		_alert( 'HttpRequest¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.', instanceObj );
+		_alert( 'HttpRequestë¥¼ ìƒì„±í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.', instanceObj );
 		return;
 	}
 
