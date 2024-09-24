@@ -34,7 +34,7 @@ onLoaded( function()
 	}
 	//validPopup( 'Notice230118', 'http://www.8doink.com/shop/data/8do_skin/pop20230118.html', 'width=706, height=707, top=0, left=0, scrollbar=no' );
 	//validPopup( 'Notice230927', 'http://www.8doink.com/shop/data/8do_skin/pop20230927.html', 'width=810, height=812, top=0, left=0, scrollbar=no' );
-	validPopup( 'Notice240909', 'http://www.8doink.com/shop/data/8do_skin/pop20240909.html', 'width=610, height=612, top=0, left=0, scrollbar=no' );
+	//validPopup( 'Notice240909', 'http://www.8doink.com/shop/data/8do_skin/pop20240909.html', 'width=610, height=612, top=0, left=0, scrollbar=no' );
 });
 
 
